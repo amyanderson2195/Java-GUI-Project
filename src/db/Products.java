@@ -56,7 +56,7 @@ public class Products extends Table {
 		
 		try {
 			connection = getDatabase().connect();
-			pstat = connection.prepareStatement("UPDATE PRODUCTS SET Description=?, Quantity=?, WHERE ProductID=?");
+			pstat = connection.prepareStatement("UPDATE PRODUCTS SET Description=?, Quantity=?, Price=? WHERE ProductID=?");
 			
 			// replace question marks with values. cast them to their original types
 			pstat.setString(1, (String)fields[1]);
